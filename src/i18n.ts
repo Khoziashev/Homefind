@@ -1,13 +1,12 @@
 import { createI18n } from "vue-i18n";
 
-const locales = ["en", "ru"];
+import en from "../locales/en/index";
+import ru from "../locales/ru/index";
 
-const messages = {} as any;
-locales.forEach((v) => {
-  messages[v] = require(`../locales/${v}`);
-});
+import cookie from "@/lib/cookie";
 
-const currentLocale = "en";
+const messages = { en, ru };
+const currentLocale = cookie.get("lang") || "en";
 
 const i18n = createI18n({
   fallbackLocale: "en",
@@ -16,4 +15,11 @@ const i18n = createI18n({
   messages,
 });
 
+const locales = ["en", "ru"];
+const languages = [
+  { locale: "en", name: "English" },
+  { locale: "ru", name: "Русский" },
+];
+
 export default i18n;
+export { locales, languages };

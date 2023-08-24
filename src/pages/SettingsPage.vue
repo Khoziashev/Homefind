@@ -1,11 +1,11 @@
 <template>
-  <div>100</div>
+  <div>105</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "HomePage",
+  name: "SettingsPage",
 });
 </script>

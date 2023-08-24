@@ -47,7 +47,13 @@ export default defineComponent({
 
   computed: {
     getNavIcons() {
-      const icons = [{ icon: "mdi-cog", title: "Settings", value: "settings" }];
+      const icons = [
+        {
+          icon: "mdi-cog",
+          title: this.$t("mainNav.settings"),
+          value: "settings",
+        },
+      ];
 
       if (this.isOwner) {
         icons.unshift(

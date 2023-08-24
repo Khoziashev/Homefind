@@ -1,20 +1,41 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomePage from "../pages/HomePage.vue";
+import ForSalePage from "../pages/ForSalePage.vue";
+import RentingPage from "../pages/RentingPage.vue";
+import BuyingPage from "../pages/BuyingPage.vue";
+import ForRentPage from "../pages/ForRentPage.vue";
+import SettingsPage from "../pages/SettingsPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "HomePage",
+    component: HomePage,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    path: "/forSale",
+    name: "ForSalePage",
+    component: ForSalePage,
+  },
+  {
+    path: "/renting",
+    name: "RentingPage",
+    component: RentingPage,
+  },
+  {
+    path: "/buying",
+    name: "BuyingPage",
+    component: BuyingPage,
+  },
+  {
+    path: "/forRent",
+    name: "ForRentPage",
+    component: ForRentPage,
+  },
+  {
+    path: "/settings",
+    name: "SettingsPage",
+    component: SettingsPage,
   },
 ];
 

@@ -1,3 +1,5 @@
 module.exports = {
-  presets: ["@vue/cli-plugin-babel/preset"],
+  sourceType: "unambiguous",
+  plugins: ["@babel/plugin-transform-runtime"],
+  presets: ["@babel/preset-env"],
 };
